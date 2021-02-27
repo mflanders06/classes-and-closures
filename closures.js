@@ -211,12 +211,12 @@ function secretNumber() {
 
 function timeOutCounter() {
   for (var i = 0; i <= 5; i++) {
-    function memoryClosure(i){
+    function memoryClosure(i){ //added this line
       setTimeout(function() {
         console.log(i);
       }, i * 1000);
     }
-    memoryClosure(i);
+    memoryClosure(i);  //added this line
   }
 }
 timeOutCounter();
