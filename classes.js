@@ -174,6 +174,8 @@ console.log(bossMan);
 //Code Here
 
 
+  
+
 class Machine{
   constructor(){
     this.widgets_made_count = 0;
@@ -191,10 +193,18 @@ class Machine{
   }
 
   reboot(){     //specrunner is failing this one.
-    return function(){
-      this.wear_and_tear_count -= 10;
-      this.needs_reboot = false;
-    }
+    this.wear_and_tear_count -= 10;
+    this.needs_reboot = false;
   }
 
 }
+
+
+
+
+
+let candyMaker = new Machine();
+candyMaker.makeWidgets(800);
+candyMaker.fixMachine();
+//candyMaker.reboot();
+console.log(candyMaker);
